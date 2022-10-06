@@ -303,6 +303,7 @@ def dependenciesInstall(String dcap_url = "", local_repo_path = "", String insta
                 ansible-playbook ${build_dir}/scripts/ansible/oe-contributors-acc-setup.yml \
                   --extra-vars "intel_sgx_apt_repository=file://${local_repo_path} intel_sgx_apt_repository_config=\'trusted=yes arch=amd64\' ${install_flags}"
                 wget https://download.01.org/intel-sgx/latest/linux-latest/distro/ubuntu20.04-server/debian_pkgs/libs/libsgx-enclave-common/libsgx-enclave-common_2.17.100.3-focal1_amd64.deb
+                sudo apt remove -y libsgx-enclave-common
                 sudo dpkg -i libsgx-enclave-common_2.17.100.3-focal1_amd64.deb
             """
         } else {
