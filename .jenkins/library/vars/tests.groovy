@@ -429,6 +429,10 @@ def TestIntelRCs(String label, String release_version, String oe_package = "open
                 }
                 helpers.dependenciesInstall(dcap_url, local_repository_path, install_flags)
                 helpers.releaseInstall(release_version, oe_package, source)
+                sh """
+                    wget https://download.01.org/intel-sgx/latest/linux-latest/distro/ubuntu20.04-server/debian_pkgs/libs/libsgx-enclave-common/libsgx-enclave-common_2.17.100.3-focal1_amd64.deb
+                    sudo dpkg -i libsgx-enclave-common_2.17.100.3-focal1_amd64.deb
+                """
                 helpers.TestSamplesCommand(lvi_mitigation, oe_package)
             }
         }
