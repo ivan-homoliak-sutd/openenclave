@@ -9,7 +9,7 @@ intel_dcap_driver_files:
   - "/dev/sgx_enclave"
 
 intel_sgx_packages:
-  - "libsgx-enclave-common"
+  # - "libsgx-enclave-common"
   - "libsgx-ae-qve"
   - "libsgx-ae-pce"
   - "libsgx-ae-qe3"
