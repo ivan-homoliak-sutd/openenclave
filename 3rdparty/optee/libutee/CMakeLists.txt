@@ -28,7 +28,6 @@ add_library(oeutee
   ${OE_TZ_LIBUTEE_SRC}/tee_socket_pta.c
   ${OE_TZ_LIBUTEE_SRC}/tee_system_pta.c
   ${OE_TZ_LIBUTEE_SRC}/arch/arm/user_ta_entry.c
-  ${OE_TZ_LIBUTEE_SRC}/arch/arm/utee_misc.c
   ${OE_TZ_LIBUTILS_EXT_SRC}/consttime_memcmp.c)
 set_property(TARGET oeutee PROPERTY C_STANDARD 99)
 target_compile_options(oeutee PUBLIC
