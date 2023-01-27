@@ -16,7 +16,6 @@ try{
         "ACC1804 clang-11 RelWithDebInfo EEID Experimental LVI ControlFlowFULL Tests": { tests.ACCTest(globalvars.AGENTS_LABELS["acc-ubuntu-18.04"], 'clang-11', 'RelWithDebInfo', ['-DLVI_MITIGATION=ControlFlow', '-DLVI_MITIGATION_SKIP_TESTS=OFF', '-DWITH_EEID=ON']) },
         "ACC1804 clang-11 RelWithDebInfo LVI ControlFlow-Clang": { tests.ACCTest(globalvars.AGENTS_LABELS["acc-ubuntu-18.04"], 'clang-11', 'RelWithDebInfo', ['-DLVI_MITIGATION=ControlFlow-Clang', '-DLVI_MITIGATION_SKIP_TESTS=OFF']) },
         "ACC1804 clang-10 RelWithDebInfo LVI ControlFlow":       { tests.ACCTest(globalvars.AGENTS_LABELS["acc-ubuntu-18.04"], 'clang-10', 'RelWithDebInfo', ['-DLVI_MITIGATION=ControlFlow', '-DLVI_MITIGATION_SKIP_TESTS=OFF']) },
-        "ACC1804 clang-10 RelWithDebInfo LVI ControlFlow-Clang": { tests.ACCTest(globalvars.AGENTS_LABELS["acc-ubuntu-18.04"], 'clang-10', 'RelWithDebInfo', ['-DLVI_MITIGATION=ControlFlow-Clang', '-DLVI_MITIGATION_SKIP_TESTS=OFF']) },
 
         "ACC2004 clang-11 Debug LVI e2e":                   { tests.ACCTest(globalvars.AGENTS_LABELS["acc-ubuntu-20.04-vanilla"], 'clang-11', 'Debug',   ['-DLVI_MITIGATION=ControlFlow', '-DLVI_MITIGATION_SKIP_TESTS=ON'], [], true) }
     ]
